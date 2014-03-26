@@ -26,16 +26,19 @@
 
 
 
-<div class="image">
+
   <% @images.each do |image| %>
-    <%= image_tag image.image_file_url(:thumb) %>
-    <div class="name"><%= image.name %></div>
-    <div class="actions">
-      <%= link_to 'Edit', edit_image_path(image) %> | 
-      <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <div class="image">
+      <div class="border"><%= image_tag image.image_file_url(:thumb) %></div>
+      <div class="name"><%= image.name %></div>
+      <div class="actions">
+        <%= link_to 'Show', image %> |
+        <%= link_to 'Edit', edit_image_path(image) %> | 
+        <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
   <% end %>
-</div>
+
 <div class="clear"></div>
 <br>
 

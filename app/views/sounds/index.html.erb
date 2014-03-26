@@ -1,0 +1,34 @@
+<h1>Listing sounds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Audio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sounds.each do |sound| %>
+      <tr>
+        <td><%= sound.name %></td>
+        <td>
+            <audio controls="controls">
+              Your browser does not support the <code>audio</code> element.
+              <source src=<%= sound.audio %> type="audio/mp3">
+            </audio>
+        </td>
+        <td><%= link_to 'Show', sound %></td>
+        <td><%= link_to 'Edit', edit_sound_path(sound) %></td>
+        <td><%= link_to 'Destroy', sound, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sound', new_sound_path %>

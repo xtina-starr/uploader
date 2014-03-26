@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sound.name %>
+</p>
+
+<p>
+  <strong>Audio:</strong>
+  <audio controls="controls">
+    Your browser does not support the <code>audio</code> element.
+    <source src=<%= @sound.audio %> type="audio/mp3">
+  </audio>
+  
+</p>
+
+<%= link_to 'Edit', edit_sound_path(@sound) %> |
+<%= link_to 'Back', sounds_path %>

@@ -1,4 +1,6 @@
 Imagez::Application.routes.draw do
+  resources :sounds
+
   resources :images
 
   # The priority is based upon order of creation: first created -> highest priority.
