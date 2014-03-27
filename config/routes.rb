@@ -1,4 +1,6 @@
 Imagez::Application.routes.draw do
+  resources :videos
+
   resources :sounds
 
   resources :images
