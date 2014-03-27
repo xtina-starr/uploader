@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Link:</strong>
-  <%= @video.link %>
+  <strong>Video:</strong>
+  <iframe width="560" height="315" src=<%= @video.link %> frameborder="0" allowfullscreen></iframe>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
